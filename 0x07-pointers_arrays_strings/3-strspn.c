@@ -1,6 +1,6 @@
 #include"main.h"
 /**
- * _strpn - gets the length of a prefix substring
+ * _strspn - gets the length of a prefix substring
  * @s: string to check
  * @accept: substring of characters
  * Return: n bytes in intial segment of s which
