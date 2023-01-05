@@ -1,5 +1,11 @@
 #include"main.h"
 
+/**
+ * prime2 - checks for prime numbers
+ *
+ * Return: 1 on success otherwise -1
+ */
+
 int prime2(int a, int b)
 {
 	if (a == b)
