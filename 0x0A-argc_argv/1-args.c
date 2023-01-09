@@ -2,17 +2,15 @@
 #include<stdlib.h>
 
 /**
- * main - prints its own name
- *
+ * main - print number of arguments passed into it
  * @argc: argument count
  * @argv: argument vector
  *
  * Return: void
  */
 
-int main(int argc, char **argv)
+int main(int argc, __attribute__((unused)) char **argv)
 {
-	if (argc >= 1)
-		printf("%s\n", argv[0]);
+	printf("%d\n", argc - 1);
 	return (0);
 }
