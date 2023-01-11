@@ -1,4 +1,6 @@
 #include"main.h"
+#include<stdio.h>
+#include<stdlib.h>
 
 /**
  * create_array - create an array of and initialize it with a specific value
