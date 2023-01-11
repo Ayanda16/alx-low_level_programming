@@ -1,4 +1,5 @@
 #include"main.h"
+#include<stdlib.h>
 
 /**
  * alloc_grid - allocates memory for a 2D array of ints
