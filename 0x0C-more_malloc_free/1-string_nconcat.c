@@ -34,11 +34,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	for (n = 0; n < s1_len; ++n, ++cat)
-		*cat = s2[n];
+		*cat = s1[n];
 
 	for (n = 0; n < s2_len; ++n, ++cat)
 		*cat = s2[n];
 
-	*cat = '\n';
+	*cat = '\0';
 	return (cat - s1_len - s2_len);
 }
