@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long int t1 = 0, t2 = 1, res;
+	unsigned long t1 = 0, t2 = 1, res;
 	float evenSum;
 
 	while (1)
@@ -21,7 +21,7 @@ int main(void)
 			evenSum += res;
 
 		t1 = t2;
-		t2 = evenSum;
+		t2 = res;
 	}
 	printf("%.0f\n", evenSum);
 
