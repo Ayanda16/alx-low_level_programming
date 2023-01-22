@@ -15,9 +15,9 @@ int main(void)
 
 	printf("%d, %d, ", t1, t2);
 
-	while (res <= 50)
+	while (n <= 50)
 	{
-		if (n == 0)
+		if (n == 50)
 		{
 		printf("%d \n", res);
 		}
