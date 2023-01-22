@@ -11,23 +11,18 @@ int main(void)
 	long int res = t2 + t2;
 	int n;
 
-	printf("%ld, ", t2);
-
-	while (n <= 48)
+	for (n = 0; n < 50; n++)
 	{
-		if (n == 48)
-		{
-		printf("%ld \n", res);
-		}
-		else
-		{
-			printf("%ld, ", res);
-		}
+		res = t1 + t2;
+		printf("%ld", res);
+
 		t1 = t2;
 		t2 = res;
 
-		res = t1 + t2;
-		n++;
+		if (n == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
 	return (0);
 }
