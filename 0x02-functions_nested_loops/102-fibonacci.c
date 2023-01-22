@@ -13,9 +13,9 @@ int main(void)
 
 	printf("%ld, ", t2);
 
-	while (n <= 50)
+	while (n <= 48)
 	{
-		if (n == 50)
+		if (n == 48)
 		{
 		printf("%ld \n", res);
 		}
