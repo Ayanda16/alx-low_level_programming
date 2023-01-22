@@ -7,21 +7,21 @@
  */
 int main(void)
 {
-	int t1 = 1, t2 = 2;
-	int res = t2 + t2;
-	int n = 3;
+	long int t1 = 0, t2 = 1;
+	long int res = t2 + t2;
+	int n;
 
-	printf("%d, %d, ", t1, t2);
+	printf("%ld, ", t2);
 
 	while (n <= 50)
 	{
 		if (n == 50)
 		{
-		printf("%d \n", res);
+		printf("%ld \n", res);
 		}
 		else
 		{
-			printf("%d, ", res);
+			printf("%ld, ", res);
 		}
 		t1 = t2;
 		t2 = res;
