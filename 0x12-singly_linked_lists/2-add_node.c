@@ -1,5 +1,6 @@
 #include<stdlib.h>
 #include"lists.h"
+#include<string.h>
 
 /**
  * add_node - adds a new node at the beginning of list_t list
@@ -9,7 +10,7 @@
  * Return: address of new element or NULL on failure
  */
 
-list_t *add_node(list_t **head, const char *str);
+list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
 
@@ -19,7 +20,7 @@ list_t *add_node(list_t **head, const char *str);
 		return (NULL);
 
 	new->str = strdup(str);
-	new->len = _strlen(str);
+	new->len = strlen(str);
 	new->next = *head;
 	*head = new;
 
