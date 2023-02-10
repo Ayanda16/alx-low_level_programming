@@ -5,28 +5,35 @@
 #include <unistd.h>
 
 /**
- * filename is the name of the file to create
- * text_content is a NULL terminated string to write to the file
- * Returns: 1 on success, -1 on failure
+ * create_file - creates a file
+ * @filename: is the name of the file to create
+ * @text_content: is a NULL terminated string to write to the file
+ * Return: 1 on success, -1 on failure
  */
+
 int create_file(const char *filename, char *text_content)
 {
-	int fd, err, len;
+	int fd, rd, wr;
 
-	if (filename == NULL)
-		return (-1);
-	if (text_content == NULL)
-		text_content = "";
-
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
-	if (fd < 0)
+	if (!filename)
 		return (-1);
 
-	while (text_content && *(text_content + len))
-		len++;
-	err = write(fd, text_content, len);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 00600);
+	if (fd == -1)
+		return (-1);
+
+	if (text_content)
+	{
+		for (rd = 0; *(text_content + rd);)
+			rd++;
+
+		wr = write(fd, text_content, rd);
+		if (wr != rd)
+		{
+			close(fd);
+			return (-1);
+		}
+	}
 	close(fd);
-	if (err < 0)
-		return (-1);
 	return (1);
 }
